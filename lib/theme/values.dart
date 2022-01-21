@@ -25,21 +25,18 @@ Color primaryTextColor = const Color(0xff000000);
 Color secondaryTextColor = const Color(0xff999999);
 Color disabledTextColor = const Color(0xff616161);
 
+// got from internet
 Color blueCheckColor = const Color(0xff3fbbec);
 Color messageBubbleColor = const Color(0xffe1ffc7);
+Color iconColor = const Color(0xff858b90);
+Color textFieldHintColor = const Color(0xffcdcdcd);
+Color secondaryColor = const Color(0xff00897b);
 
+TextStyle headerTextStyle = GoogleFonts.poppins(color: primaryColor);
 
-TextStyle headerTextStyle = GoogleFonts.poppins(
-  color: primaryColor
-);
+TextStyle primaryTextStyle = GoogleFonts.poppins(color: primaryTextColor);
 
-TextStyle primaryTextStyle = GoogleFonts.poppins(
-  color: primaryTextColor
-);
-
-TextStyle secondaryTextStyle = GoogleFonts.poppins(
-  color: secondaryTextColor
-);
+TextStyle secondaryTextStyle = GoogleFonts.poppins(color: secondaryTextColor);
 
 FontWeight light = FontWeight.w300;
 FontWeight regular = FontWeight.w400;
