@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 
 class MessageItem extends StatelessWidget {
   final String? content;
-  final DateTime? timestamp;
+  final DateTime timestamp;
   final bool? isYou;
   final bool isRead;
   final bool isSent;
@@ -13,7 +13,7 @@ class MessageItem extends StatelessWidget {
   const MessageItem({
     Key? key,
     this.content,
-    this.timestamp,
+    required this.timestamp,
     this.isYou,
     this.isRead = false,
     this.isSent = true,
@@ -85,9 +85,7 @@ class MessageItem extends StatelessWidget {
                             SizedBox(
                               width: 4.0,
                             ),
-                            isYou!
-                                ? _getIcon()
-                                : Container()
+                            isYou! ? _getIcon() : Container()
                           ],
                         ),
                       ),
@@ -101,7 +99,7 @@ class MessageItem extends StatelessWidget {
   }
 
   Widget _getIcon() {
-    if(!isSent) {
+    if (!isSent) {
       return Icon(
         Icons.check,
         size: 18.0,
@@ -111,8 +109,7 @@ class MessageItem extends StatelessWidget {
     return Icon(
       Icons.done_all,
       size: 18.0,
-      color:
-      isRead ? blueCheckColor : Colors.grey,
+      color: isRead ? blueCheckColor : Colors.grey,
     );
   }
 }
